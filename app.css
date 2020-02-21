@@ -1,0 +1,279 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #130026;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 110%;
+  position: relative;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 20fr 10fr 10fr 10fr 10fr 10fr 10fr 10fr;
+  height: 70px;
+  padding: 0px 5%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav > a {
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+nav > a.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+nav a:last-child {
+  justify-self: right;
+}
+
+#logo {
+  font-size: 150%;
+  font-weight: 400;
+}
+
+/* ########################### */
+
+#search {
+  width: 100%;
+  padding: 2% 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: 10fr 3fr 10fr 10fr 10fr 3fr;
+  grid-column-gap: 10px;
+  color: white;
+}
+#search :nth-child(2) {
+  background-color: white;
+  color: #555;
+}
+input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 110%;
+  font-weight: 300;
+  padding-left: 10px;
+}
+button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 110%;
+  font-weight: 300;
+  color: white;
+  background-color: rgba(222, 22, 102, 0.7);
+  cursor: pointer;
+}
+
+/* ########################### */
+#temporal {
+  width: 100%;
+  padding: 0% 5%;
+}
+
+#temporal > img {
+  width: 100%;
+}
+
+/* ########################### */
+main {
+  display: grid;
+  grid-template-columns: 20fr 50fr;
+  grid-column-gap: 20px;
+  color: white;
+  width: 100%;
+  padding: 1% 5%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#options {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.onceFlight {
+  display: grid;
+  grid-template-columns: 10fr 10fr 10fr;
+}
+
+.onceFlight img {
+  width: 10%;
+}
+#stops-box {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+#stops-box .price {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#priceOptions {
+  width: 100%;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 10fr 10fr 10fr 10fr;
+  background-color: #7f246a;
+  text-transform: lowercase;
+}
+
+#priceOptions > div {
+  padding: 20px 10px;
+}
+#priceOptions .active {
+  background-color: #de1666;
+}
+
+#flight {
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+  width: 100%;
+  margin: 50px 0px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#flight-route {
+  background-color: #fff;
+  color: #333;
+  padding-left: 10px;
+  padding: 20px 0px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-row-gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
+  background-color: #fff;
+  color: #333;
+  padding-left: 10px;
+  padding: 20px 0px;
+}
+
+#flight-route img {
+  width: 40px;
+}
+#flight-price {
+  display: grid;
+  background-color: #edecec;
+  /* align-content: center; */
+  color: black;
+  display: grid;
+  padding: 50px 50px;
+}
+#flight-price > div {
+  font-size: 140%;
+  color: black;
+  font-weight: 400;
+}
+
+#flight-price button {
+  display: block;
+  background-color: #28a745;
+  width: 70%;
+  color: white;
+  align-self: end;
+}
+
+input[type="checkbox"] {
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+#fromCityBox {
+  position: relative;
+}
+
+#fromCityResults {
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+  top: 41px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+
+/* ########################### */
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.modal-content {
+  width: 60%;
+  margin: auto;
+  margin-top: 100px;
+  background: white;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  margin-bottom: 50px;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#userContactInfo p {
+  margin-bottom: 20px;
+}
+
+#confirmationInfo h3 {
+  margin-bottom: 40px;
+}
+
+.modal-content input {
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.modal-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.btn-cancel {
+  background-color: #edecec;
+  width: 50%;
+  margin: auto;
+  color: #333;
+  visibility: hidden;
+}
+.btn-next {
+  background-color: #28a745;
+  width: 50%;
+  margin: auto;
+}

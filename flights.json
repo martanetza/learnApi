@@ -1,0 +1,344 @@
+[
+    {
+        "price": "da",
+        "id": "5e4fee494190f",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "d",
+                "fromCity": "d",
+                "toCity": "d",
+                "departureTime": "d",
+                "arrivalTime": "d",
+                "waitingTime": "d"
+            },
+            {
+                "airlinesName": "das",
+                "airlinesShortcut": "a",
+                "fromCity": "a",
+                "toCity": "a",
+                "departureTime": "a",
+                "arrivalTime": "a",
+                "waitingTime": "a"
+            }
+        ]
+    },
+    {
+        "price": "da",
+        "id": "5e4fee7947016",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "f",
+                "fromCity": "f",
+                "toCity": "f",
+                "departureTime": "f",
+                "arrivalTime": "f",
+                "waitingTime": "f"
+            },
+            {
+                "airlinesName": "fsdf",
+                "airlinesShortcut": "s",
+                "fromCity": "s",
+                "toCity": "s",
+                "departureTime": "s",
+                "arrivalTime": "s",
+                "waitingTime": "s"
+            }
+        ]
+    },
+    {
+        "price": "da",
+        "id": "5e4fee9a9c313",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "s",
+                "fromCity": "f",
+                "toCity": "f",
+                "departureTime": "f",
+                "arrivalTime": "d",
+                "waitingTime": "d"
+            },
+            {
+                "airlinesName": "fsdf",
+                "airlinesShortcut": "f",
+                "fromCity": "s",
+                "toCity": "s",
+                "departureTime": "s",
+                "arrivalTime": "s",
+                "waitingTime": "s"
+            },
+            {
+                "airlinesName": "fsdsf",
+                "airlinesShortcut": "d",
+                "fromCity": "d",
+                "toCity": "d",
+                "departureTime": "f",
+                "arrivalTime": "f",
+                "waitingTime": "f"
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e4ffe3794ca8",
+        "schedule": [
+            {
+                "airlinesName": "daasd",
+                "airlinesShortcut": "d",
+                "fromCity": "d",
+                "toCity": "d",
+                "departureTime": "d",
+                "arrivalTime": "d",
+                "waitingTime": "d"
+            },
+            {
+                "airlinesName": "dada",
+                "airlinesShortcut": "a",
+                "fromCity": "a",
+                "toCity": "a",
+                "departureTime": "a",
+                "arrivalTime": "a",
+                "waitingTime": "a"
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e4fff68c5b5a",
+        "schedule": [
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "dd",
+        "id": "5e4fff75f2b85",
+        "schedule": [
+            {
+                "airlinesName": "dasa",
+                "airlinesShortcut": "dasd",
+                "fromCity": "das",
+                "toCity": "das",
+                "departureTime": "das",
+                "arrivalTime": "da",
+                "waitingTime": "asda"
+            }
+        ]
+    },
+    {
+        "price": "dd",
+        "id": "5e4fff9e04005",
+        "schedule": [
+            {
+                "airlinesName": "dasa",
+                "airlinesShortcut": "m",
+                "fromCity": "m",
+                "toCity": "m",
+                "departureTime": "m",
+                "arrivalTime": "m",
+                "waitingTime": "m"
+            },
+            {
+                "airlinesName": "ma",
+                "airlinesShortcut": "a",
+                "fromCity": "a",
+                "toCity": "a",
+                "departureTime": "a",
+                "arrivalTime": "a",
+                "waitingTime": "a"
+            }
+        ]
+    },
+    {
+        "price": "dd",
+        "id": "5e4fffbd97dd8",
+        "schedule": [
+            {
+                "airlinesName": "dasa",
+                "airlinesShortcut": "m",
+                "fromCity": "m",
+                "toCity": "m",
+                "departureTime": "m",
+                "arrivalTime": "m",
+                "waitingTime": "m"
+            },
+            {
+                "airlinesName": "ma",
+                "airlinesShortcut": "a",
+                "fromCity": "a",
+                "toCity": "a",
+                "departureTime": "a",
+                "arrivalTime": "a",
+                "waitingTime": "a"
+            }
+        ]
+    },
+    {
+        "price": "mar",
+        "id": "5e50003fe3738",
+        "schedule": [
+            {
+                "airlinesName": "mar",
+                "airlinesShortcut": "mar",
+                "fromCity": "mar",
+                "toCity": "mar",
+                "departureTime": "marm",
+                "arrivalTime": "mar",
+                "waitingTime": "mar"
+            },
+            {
+                "airlinesName": "mar",
+                "airlinesShortcut": "mar",
+                "fromCity": "adsa",
+                "toCity": "mar",
+                "departureTime": "mar",
+                "arrivalTime": "mar",
+                "waitingTime": "mar"
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e5000ddce3f5",
+        "schedule": [
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e5001c9221f5",
+        "schedule": [
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e500278532ef",
+        "schedule": [
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e5003b4be995",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            },
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e5003bc68738",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            },
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            },
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    },
+    {
+        "price": "",
+        "id": "5e5003ce0a341",
+        "schedule": [
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            },
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            },
+            {
+                "airlinesName": "dasda",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": "",
+                "arrivalTime": "",
+                "waitingTime": ""
+            }
+        ]
+    }
+]
