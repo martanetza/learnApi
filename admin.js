@@ -50,6 +50,17 @@ function deleteFlight() {
   console.log(event.target.dataset.todelete);
 }
 
+async function updateFlight() {
+  var oForm = document.querySelector("#editPrice");
+  var jConnection = await fetch("update-flight.php", {
+    method: "POST",
+    body: new FormData(oForm)
+  });
+
+  getItems();
+  closeModalEdit();
+}
+
 function addFlight() {
   async function saveFlight() {
     var oForm = document.querySelector("#addFlightFmr");
@@ -131,6 +142,7 @@ async function getItems() {
       jData[i].price
     );
     sItemFlightEdit = sItemFlightEdit.replace("::modal id::", jData[i].id);
+    sItemFlightEdit = sItemFlightEdit.replace("::id::", jData[i].id);
     document
       .querySelector("main")
       .insertAdjacentHTML("beforeend", sItemFlightEdit);

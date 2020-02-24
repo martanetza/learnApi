@@ -1,20 +1,20 @@
 [
-  {
-    "price": "12345",
-    "totalTime": 0,
-    "id": "5e54473f12e20",
-    "schedule": [
-      {
-        "airlinesName": "",
-        "airlinesShortcut": "",
-        "fromCity": "",
-        "toCity": "",
-        "departureTime": 3600,
-        "arrivalTime": 3600,
-        "waitingTime": 0,
+    {
+        "price": "2001",
         "totalTime": 0,
-        "flyingTime": 0
-      }
-    ]
-  }
+        "id": "5e54473f12e20",
+        "schedule": [
+            {
+                "airlinesName": "",
+                "airlinesShortcut": "",
+                "fromCity": "",
+                "toCity": "",
+                "departureTime": 3600,
+                "arrivalTime": 3600,
+                "waitingTime": 0,
+                "totalTime": 0,
+                "flyingTime": 0
+            }
+        ]
+    }
 ]
