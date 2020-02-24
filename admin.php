@@ -1,6 +1,8 @@
 <?php
 require_once('has-access.php');
 $sUserEmail = $_SESSION['sEmail'];
+$sBluePrint = file_get_contents('bluePrint.html');
+$sBluePrintFlight = file_get_contents('bluePrintFlight.html');
 
 $page_title = "Admin panel";
 require_once('compTop.php');
@@ -17,7 +19,7 @@ require_once('compNav.php');
     </header>
     <div id="results">
       <div class="oneFlight">
-        <div class="contol">
+        <div class="control">
           <div>
             edite
           </div>
@@ -68,7 +70,7 @@ require_once('compNav.php');
         </div>
       </div>
       <div class="oneFlight">
-        <div class="contol">
+        <div class="control">
           <div>
             edite
           </div>
@@ -169,7 +171,30 @@ require_once('compNav.php');
     </div>
   </div>
 </main>
-
+<script>
+  var sBluePrint = `<?= $sBluePrint ?>`
+  var sBluePrintFlight = `<?= $sBluePrintFlight ?>`
+  // async function getItems() {
+  //   var jResponse = await fetch('get-flights.php')
+  //   var jData = await jResponse.json()
+  //   var sCopy = sBluePrint
+  //   for (var i = 0; i < jData.length; i++) {
+  //     for (var j = 0; j < jData[i].schedule.length; j++) {
+  //       console.log("x");
+  //       var sItem = sCopy.replace('::city from::', jData[i].schedule[j].fromCity)
+  //       sItem = sItem.replace('::city to::', jData[i].schedule[j].toCity)
+  //       sItem = sItem.replace('::time from::', jData[i].schedule[j].departureTime)
+  //       sItem = sItem.replace('::time to::', jData[i].schedule[j].arrivalTime)
+  //       sItem = sItem.replace('::time-flight::', jData[i].schedule[j].totalTime)
+  //       sItem = sItem.replace('::waiting time::', jData[i].schedule[j].waitingTime)
+  //       // sItem = sItem.replace('::test::', jData[1].test)
+  //       // document.getElementById("items").insertAdjacentHTML('beforeend', sItem)
+  //       console.log(sItem)
+  //     }
+  //   }
+  // }
+  // getItems()
+</script>
 <?php
 require_once('compBottom.php')
 

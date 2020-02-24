@@ -1,29 +1,31 @@
 [
-    {
-        "price": "",
-        "totalTime": 0,
-        "id": "5e52fdacd0cf5",
-        "schedule": [
-            {
-                "airlinesName": "WizzAir",
-                "airlinesShortcut": "WZA",
-                "fromCity": "Gdansk",
-                "toCity": "Copenhagen",
-                "departureTime": 1582531200,
-                "arrivalTime": 1582534800,
-                "waitingTime": 3600,
-                "totalTime": 7200
-            },
-            {
-                "airlinesName": "Norwegian",
-                "airlinesShortcut": "NRW",
-                "fromCity": "Copenhagen",
-                "toCity": "Lisbon",
-                "departureTime": 1582538400,
-                "arrivalTime": 1582552800,
-                "waitingTime": 0,
-                "totalTime": 21600
-            }
-        ]
-    }
+  {
+    "price": "4321",
+    "totalTime": 0,
+    "id": "5e52fdacd0cf5",
+    "schedule": [
+      {
+        "airlinesName": "WizzAir",
+        "airlinesShortcut": "WZA",
+        "fromCity": "Gdansk",
+        "toCity": "Copenhagen",
+        "departureTime": 1582531200,
+        "arrivalTime": 1582534800,
+        "waitingTime": 3600,
+        "flyingTime": 3600,
+        "totalTime": 7200
+      },
+      {
+        "airlinesName": "Norwegian",
+        "airlinesShortcut": "NRW",
+        "fromCity": "Copenhagen",
+        "toCity": "Lisbon",
+        "departureTime": 1582538400,
+        "arrivalTime": 1582552800,
+        "waitingTime": 0,
+        "flyingTime": 14400,
+        "totalTime": 21600
+      }
+    ]
+  }
 ]

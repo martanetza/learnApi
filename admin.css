@@ -79,7 +79,7 @@ section header div:last-child {
   margin: auto auto 10px auto;
 }
 
-.contol {
+.control {
   display: grid;
   grid-template-columns: 10fr 10fr;
   width: 15%;
@@ -87,11 +87,11 @@ section header div:last-child {
   text-align: right;
 }
 
-.contol div:first-child {
+.control div:first-child {
   color: green;
   font-weight: 400;
 }
-.contol div:last-child {
+.control div:last-child {
   color: red;
   font-weight: 400;
 }
@@ -308,4 +308,8 @@ button {
   width: 50%;
   margin: 100px auto auto auto;
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
