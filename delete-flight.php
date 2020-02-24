@@ -7,9 +7,9 @@ print_r($jFlights);
 
 foreach ($jFlights as $flight) {
     if ($flight->id == $flightID) {
-        // $key = array_search($jCity, $jCities->cities);
+        $key = array_search($flight, $jFlights);
 
-        array_splice($jFlights, $index, 1);
+        array_splice($jFlights, $key, 1);
         break;
     }
 }

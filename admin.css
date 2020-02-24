@@ -287,7 +287,7 @@ button {
   width: 30%;
 }
 #saveFlightButton,
-#updateFlightButton {
+.updateFlightButton {
   margin: auto 20px 50px auto;
   padding: 10px 20px;
   display: block;

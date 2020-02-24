@@ -51,7 +51,9 @@ function deleteFlight() {
 }
 
 async function updateFlight() {
-  var oForm = document.querySelector("#editPrice");
+  var id = event.target.dataset.toedit;
+  console.log(id);
+  var oForm = document.querySelector(`#editPrice${id}`);
   var jConnection = await fetch("update-flight.php", {
     method: "POST",
     body: new FormData(oForm)
@@ -89,7 +91,9 @@ function openModalEdit() {
   console.log(id);
 }
 function closeModalEdit() {
-  document.querySelector(".modal-edit").style.display = "none";
+  document.querySelectorAll(".modal-edit").forEach(e => {
+    e.style.display = "none";
+  });
 }
 
 function closeModal() {
@@ -143,6 +147,8 @@ async function getItems() {
     );
     sItemFlightEdit = sItemFlightEdit.replace("::modal id::", jData[i].id);
     sItemFlightEdit = sItemFlightEdit.replace("::id::", jData[i].id);
+    sItemFlightEdit = sItemFlightEdit.replace("::id input::", jData[i].id);
+    sItemFlightEdit = sItemFlightEdit.replace("::id button::", jData[i].id);
     document
       .querySelector("main")
       .insertAdjacentHTML("beforeend", sItemFlightEdit);

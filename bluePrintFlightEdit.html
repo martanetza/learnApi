@@ -2,18 +2,24 @@
   <div class="modal-content">
     <div id="closeBth" onclick="closeModalEdit()">X</div>
     <h4>Update the prcie of the flight</h4>
-    <form id="editPrice" onsubmit="return false">
+    <form id="editPrice::id::" onsubmit="return false">
       <label>
         Price
         <input
-          id="modal-price"
+          class="modal-price"
           name="modal-price"
           type="text"
           value="::price to edit::"
         />
       </label>
-      <input type="hidden" name="id" value="::id::" />
-      <button onclick="updateFlight()" id="updateFlightButton">save</button>
+      <input type="hidden" name="id" value="::id input::" />
+      <button
+        data-toedit="::id button::"
+        onclick="updateFlight()"
+        class="updateFlightButton"
+      >
+        save
+      </button>
     </form>
   </div>
 </div>
