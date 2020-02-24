@@ -25,15 +25,15 @@ function addRoute() {
 
             <label class="departureTime" for="departureTime">
               Departure time
-              <input id="departureTime" name="departureTime[]" type="text" />
+              <input id="departureTime" name="departureTime[]" type="datetime-local" />
             </label>
             <label class="arrivalTime" for="arrivalTime">
               Arrival time
-              <input id="arrivalTime" name="arrivalTime[]" type="text" />
+              <input id="arrivalTime" name="arrivalTime[]" type="datetime-local" />
             </label>
             <label class="waitingTime" for="waitingTime">
               Waiting time
-              <input id="waitingTime" name="waitingTime[]" type="text" />
+              <input id="waitingTime" name="waitingTime[]" type="time" />
             </label>
             </div>
             `;
@@ -47,7 +47,9 @@ function addFlight() {
       body: new FormData(oForm)
     });
     var sData = await jConnection.text();
-    console.log(sData);
+    document.querySelectorAll(".modal input").forEach(e => {
+      e.value = "";
+    });
   }
   saveFlight();
   document.querySelector(".modal").style.display = "none";
