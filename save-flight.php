@@ -36,8 +36,8 @@ array_push($jFlights, $jFlight);
 //loop through all the routes
 for ($i = 0; $i < count($aAirlinesNames); $i++) {
     // calculate total route and waiting time in seconds 
-    $iDepartureEpochTime = strtotime($aDepartureTimes[$i]);
-    $iArrivalEpochTime = strtotime($aArrivalTimes[$i]);
+    $iDepartureEpochTime = strtotime($aDepartureTimes[$i]) + 3600;
+    $iArrivalEpochTime = strtotime($aArrivalTimes[$i]) + 3600;
     $waitingTimeArray = explode(':', $aWaitingTimes[$i]);
     $iWaitingTimeSeconds = (intval($waitingTimeArray[0]) * 60 * 60) + (intval($waitingTimeArray[1]) * 60);
     $iTotalRouteTime = $iArrivalEpochTime - $iDepartureEpochTime + $iWaitingTimeSeconds;
@@ -52,9 +52,10 @@ for ($i = 0; $i < count($aAirlinesNames); $i++) {
     $jRoute->arrivalTime = $iArrivalEpochTime;
     $jRoute->waitingTime = $iWaitingTimeSeconds;
     $jRoute->totalTime =  $iFlightTotalTime;
+    $jRoute->flyingTime =  $iArrivalEpochTime - $iDepartureEpochTime;
 
-    $waitingTimeToArray = explode(':',  $aWaitingTimes[$i]);
-    $iHour = intval($waitingTimeToArray);
+    // $waitingTimeToArray = explode(':',  $aWaitingTimes[$i]);
+    // $iHour = intval($waitingTimeToArray);
 
     array_push($jFlight->schedule, $jRoute);
 }

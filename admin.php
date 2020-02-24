@@ -128,7 +128,7 @@ require_once('compNav.php');
       <h2>Add a new flight</h2>
       <p>Routes details</p>
       <form id="addFlightFmr" onsubmit="return false">
-        <section class="routes">
+        <section class="routes-modal">
           <div class="oneRoute">
             <label class="airlinesName" for="airlinesName">
               Airlines name
