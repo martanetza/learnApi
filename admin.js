@@ -39,9 +39,14 @@ function addRoute() {
             `;
 }
 
-async function deleteFlight() {
+function deleteFlight() {
   var id = event.target.dataset.todelete;
-  var jResponse = await fetch(`delete-flight.php?id=${id}`);
+  async function deleting() {
+    var jResponse = await fetch(`delete-flight.php?id=${id}`);
+    console.log(jResponse);
+    getItems();
+  }
+  deleting();
   console.log(event.target.dataset.todelete);
 }
 
@@ -66,6 +71,14 @@ function addFlight() {
 
 function openModal() {
   document.querySelector(".modal").style.display = "block";
+}
+function openModalEdit() {
+  var id = event.target.dataset.toedit;
+  document.querySelector(`#modalId${id}`).style.display = "block";
+  console.log(id);
+}
+function closeModalEdit() {
+  document.querySelector(".modal-edit").style.display = "none";
 }
 
 function closeModal() {
@@ -100,16 +113,27 @@ async function getItems() {
   var jData = await jResponse.json();
   var sCopy = sBluePrint;
   var sCopyBluePrintFlight = sBluePrintFlight;
+  var sCopyBluePrintFlightEdit = sBluePrintFlightEdit;
   for (var i = 0; i < jData.length; i++) {
     var sItemFlight = sCopyBluePrintFlight.replace(
       "::flight id::",
       "id" + jData[i].id
     );
     sItemFlight = sItemFlight.replace("::price::", jData[i].price);
+    sItemFlight = sItemFlight.replace("::id to edit::", jData[i].id);
     sItemFlight = sItemFlight.replace("::id to delete::", jData[i].id);
     document
       .getElementById("results")
       .insertAdjacentHTML("afterbegin", sItemFlight);
+
+    var sItemFlightEdit = sCopyBluePrintFlightEdit.replace(
+      "::price to edit::",
+      jData[i].price
+    );
+    sItemFlightEdit = sItemFlightEdit.replace("::modal id::", jData[i].id);
+    document
+      .querySelector("main")
+      .insertAdjacentHTML("beforeend", sItemFlightEdit);
 
     for (var j = 0; j < jData[i].schedule.length; j++) {
       // covert data

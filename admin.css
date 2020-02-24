@@ -90,10 +90,12 @@ section header div:last-child {
 .control div:first-child {
   color: green;
   font-weight: 400;
+  cursor: pointer;
 }
 .control div:last-child {
   color: red;
   font-weight: 400;
+  cursor: pointer;
 }
 .route {
   display: grid;
@@ -184,7 +186,8 @@ button {
 
 /* #################################################################################################################### */
 
-.modal {
+.modal,
+.modal-edit {
   position: fixed;
   top: 0;
   width: 100%;
@@ -206,6 +209,15 @@ button {
   overflow-y: scroll;
 }
 
+.modal-edit .modal-content {
+  height: fit-content;
+  overflow: hidden;
+}
+.modal-edit .modal-content h4 {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .modal section {
   padding: 0px;
 }
@@ -215,11 +227,16 @@ button {
   flex-direction: row;
   padding: 0px;
 }
-.modal label {
+.modal label,
+.modal-edit label {
   color: black;
   display: grid;
   padding: 10px 20px;
   font-size: 90%;
+}
+
+.modal-edit label {
+  margin-bottom: 40px;
 }
 
 #closeBth {
@@ -233,7 +250,8 @@ button {
   padding: 20px 20px 0px 20px;
   font-weight: 400;
 }
-.modal input {
+.modal input,
+.modal-edit input {
   height: 35px;
   border-radius: 5px;
   outline: none;
@@ -268,7 +286,8 @@ button {
   padding: 0px 20px 20px 20px;
   width: 30%;
 }
-#saveFlightButton {
+#saveFlightButton,
+#updateFlightButton {
   margin: auto 20px 50px auto;
   padding: 10px 20px;
   display: block;
