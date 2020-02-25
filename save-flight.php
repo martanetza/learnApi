@@ -1,13 +1,13 @@
 <?php
 
 //routes schedule
-$aAirlinesNames = $_POST['airlinesName'];
-$aAirlinesShortcuts = $_POST['airlinesShortcut'];
-$aFromCities = $_POST['fromCity'];
-$aToCities = $_POST['toCity'];
-$aDepartureTimes = $_POST['departureTime'];
-$aArrivalTimes = $_POST['arrivalTime'];
-$aWaitingTimes = $_POST['waitingTime'];
+$aAirlinesNames = trim($_POST['airlinesName']);
+$aAirlinesShortcuts = trim($_POST['airlinesShortcut']);
+$aFromCities = trim($_POST['fromCity']);
+$aToCities = trim($_POST['toCity']);
+$aDepartureTimes = trim($_POST['departureTime']);
+$aArrivalTimes = trim($_POST['arrivalTime']);
+$aWaitingTimes = trim($_POST['waitingTime']);
 $iTotalRouteTime;
 
 print_r($aAirlinesNames);

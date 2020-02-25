@@ -1,154 +1,154 @@
 [
-    {
-        "price": "3200",
-        "totalTime": 0,
-        "id": "5e54e7fd00e39",
-        "schedule": [
-            {
-                "airlinesName": "Wizzair",
-                "airlinesShortcut": "WIZ",
-                "fromCity": "Gdansk",
-                "toCity": "Copenhagen",
-                "departureTime": 1582711200,
-                "arrivalTime": 1582714800,
-                "waitingTime": 0,
-                "totalTime": 3600,
-                "flyingTime": 3600
-            }
-        ]
-    },
-    {
-        "price": "2000",
-        "totalTime": 0,
-        "id": "5e54e94f62f36",
-        "schedule": [
-            {
-                "airlinesName": "Qatar Airways",
-                "airlinesShortcut": "QA",
-                "fromCity": "Copenhagen ",
-                "toCity": "Doha",
-                "departureTime": 1582666800,
-                "arrivalTime": 1582696200,
-                "waitingTime": 7500,
-                "totalTime": 36900,
-                "flyingTime": 29400
-            },
-            {
-                "airlinesName": "Qatar Airways",
-                "airlinesShortcut": "QA",
-                "fromCity": "Doha",
-                "toCity": "Sydnay",
-                "departureTime": 1582703700,
-                "arrivalTime": 1582783800,
-                "waitingTime": 0,
-                "totalTime": 117000,
-                "flyingTime": 80100
-            }
-        ]
-    },
-    {
-        "price": "2000",
-        "totalTime": 0,
-        "id": "5e54ee1d69ed9",
-        "schedule": [
-            {
-                "airlinesName": "Norwegian",
-                "airlinesShortcut": "NOR",
-                "fromCity": "Stockholm",
-                "toCity": "Krabi",
-                "departureTime": 1585161900,
-                "arrivalTime": 1585221000,
-                "waitingTime": 0,
-                "totalTime": 59100,
-                "flyingTime": 59100
-            }
-        ]
-    },
-    {
-        "price": "4000",
-        "totalTime": 0,
-        "id": "5e54ef040512b",
-        "schedule": [
-            {
-                "airlinesName": "AirAsia",
-                "airlinesShortcut": "AK",
-                "fromCity": "Krabi",
-                "toCity": "Kuala Lumpur",
-                "departureTime": 1585245600,
-                "arrivalTime": 1585254600,
-                "waitingTime": 44400,
-                "totalTime": 53400,
-                "flyingTime": 9000
-            },
-            {
-                "airlinesName": "AirAsia",
-                "airlinesShortcut": "AK",
-                "fromCity": "Kuala Lumpur",
-                "toCity": "Sydney",
-                "departureTime": 1582793400,
-                "arrivalTime": 1582834800,
-                "waitingTime": 0,
-                "totalTime": 94800,
-                "flyingTime": 41400
-            }
-        ]
-    },
-    {
-        "price": "3900",
-        "totalTime": 0,
-        "id": "5e54f0caeaffa",
-        "schedule": [
-            {
-                "airlinesName": "LOT",
-                "airlinesShortcut": "LO",
-                "fromCity": "Copenhagen",
-                "toCity": "Warsaw",
-                "departureTime": 1584042600,
-                "arrivalTime": 1584047700,
-                "waitingTime": 5100,
-                "totalTime": 10200,
-                "flyingTime": 5100
-            },
-            {
-                "airlinesName": "LOT",
-                "airlinesShortcut": "LO",
-                "fromCity": "Warsaw",
-                "toCity": "Singapore",
-                "departureTime": 1584054000,
-                "arrivalTime": 1584121200,
-                "waitingTime": 0,
-                "totalTime": 77400,
-                "flyingTime": 67200
-            }
-        ]
-    },
-    {
-        "price": "4000",
-        "totalTime": 0,
-        "id": "5e54f21195bb1",
-        "schedule": [
-            {
-                "airlinesName": "Lufthansa",
-                "airlinesShortcut": "LH",
-                "fromCity": "Copenhagen",
-                "toCity": "Frankfurt am  Main ",
-                "departureTime": 1584042300,
-                "arrivalTime": 1584045900,
-                "waitingTime": 4200,
-                "totalTime": 7800,
-                "flyingTime": 3600
-            },
-            {
-                "airlinesName": "Lufthansa",
-                "airlinesShortcut": "LH",
-                "fromCity": "Frankfurt am Main",
-                "toCity": "Singapore ",
-                "departureTime": 1584050100,
-                "arrivalTime": 1584119400,
-                "waitingTime": 0,
-                "totalTime": 77100,
-                "flyingTime": 69300
-            }
-        ]
-    }
+  {
+    "price": "3200",
+    "totalTime": 0,
+    "id": "5e54e7fd00e39",
+    "schedule": [
+      {
+        "airlinesName": "Wizzair",
+        "airlinesShortcut": "WIZ",
+        "fromCity": "Gdansk",
+        "toCity": "Copenhagen",
+        "departureTime": 1582711200,
+        "arrivalTime": 1582714800,
+        "waitingTime": 0,
+        "totalTime": 3600,
+        "flyingTime": 3600
+      }
+    ]
+  },
+  {
+    "price": "2000",
+    "totalTime": 0,
+    "id": "5e54e94f62f36",
+    "schedule": [
+      {
+        "airlinesName": "Qatar Airways",
+        "airlinesShortcut": "QA",
+        "fromCity": "Copenhagen",
+        "toCity": "Doha",
+        "departureTime": 1582666800,
+        "arrivalTime": 1582696200,
+        "waitingTime": 7500,
+        "totalTime": 36900,
+        "flyingTime": 29400
+      },
+      {
+        "airlinesName": "Qatar Airways",
+        "airlinesShortcut": "QA",
+        "fromCity": "Doha",
+        "toCity": "Sydney",
+        "departureTime": 1582703700,
+        "arrivalTime": 1582783800,
+        "waitingTime": 0,
+        "totalTime": 117000,
+        "flyingTime": 80100
+      }
+    ]
+  },
+  {
+    "price": "2000",
+    "totalTime": 0,
+    "id": "5e54ee1d69ed9",
+    "schedule": [
+      {
+        "airlinesName": "Norwegian",
+        "airlinesShortcut": "NOR",
+        "fromCity": "Stockholm",
+        "toCity": "Krabi",
+        "departureTime": 1585161900,
+        "arrivalTime": 1585221000,
+        "waitingTime": 0,
+        "totalTime": 59100,
+        "flyingTime": 59100
+      }
+    ]
+  },
+  {
+    "price": "4000",
+    "totalTime": 0,
+    "id": "5e54ef040512b",
+    "schedule": [
+      {
+        "airlinesName": "AirAsia",
+        "airlinesShortcut": "AK",
+        "fromCity": "Krabi",
+        "toCity": "Kuala Lumpur",
+        "departureTime": 1585245600,
+        "arrivalTime": 1585254600,
+        "waitingTime": 44400,
+        "totalTime": 53400,
+        "flyingTime": 9000
+      },
+      {
+        "airlinesName": "AirAsia",
+        "airlinesShortcut": "AK",
+        "fromCity": "Kuala Lumpur",
+        "toCity": "Sydney",
+        "departureTime": 1582793400,
+        "arrivalTime": 1582834800,
+        "waitingTime": 0,
+        "totalTime": 94800,
+        "flyingTime": 41400
+      }
+    ]
+  },
+  {
+    "price": "3900",
+    "totalTime": 0,
+    "id": "5e54f0caeaffa",
+    "schedule": [
+      {
+        "airlinesName": "LOT",
+        "airlinesShortcut": "LO",
+        "fromCity": "Copenhagen",
+        "toCity": "Warsaw",
+        "departureTime": 1584042600,
+        "arrivalTime": 1584047700,
+        "waitingTime": 5100,
+        "totalTime": 10200,
+        "flyingTime": 5100
+      },
+      {
+        "airlinesName": "LOT",
+        "airlinesShortcut": "LO",
+        "fromCity": "Warsaw",
+        "toCity": "Singapore",
+        "departureTime": 1584054000,
+        "arrivalTime": 1584121200,
+        "waitingTime": 0,
+        "totalTime": 77400,
+        "flyingTime": 67200
+      }
+    ]
+  },
+  {
+    "price": "4000",
+    "totalTime": 0,
+    "id": "5e54f21195bb1",
+    "schedule": [
+      {
+        "airlinesName": "Lufthansa",
+        "airlinesShortcut": "LH",
+        "fromCity": "Copenhagen",
+        "toCity": "Frankfurt am  Main ",
+        "departureTime": 1584042300,
+        "arrivalTime": 1584045900,
+        "waitingTime": 4200,
+        "totalTime": 7800,
+        "flyingTime": 3600
+      },
+      {
+        "airlinesName": "Lufthansa",
+        "airlinesShortcut": "LH",
+        "fromCity": "Frankfurt am Main",
+        "toCity": "Singapore ",
+        "departureTime": 1584050100,
+        "arrivalTime": 1584119400,
+        "waitingTime": 0,
+        "totalTime": 77100,
+        "flyingTime": 69300
+      }
+    ]
+  }
 ]

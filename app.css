@@ -55,7 +55,7 @@ nav a:last-child {
   padding: 2% 5%;
   background-color: rgba(255, 255, 255, 0.1);
   display: grid;
-  grid-template-columns: 10fr 3fr 10fr 10fr 10fr 3fr;
+  grid-template-columns: 10fr 3fr 10fr 10fr 3fr;
   grid-column-gap: 10px;
   color: white;
 }
@@ -354,4 +354,8 @@ input[type="checkbox"] {
 /* ######################################################################################## */
 .hide {
   display: none;
+}
+
+#fromCityResults div {
+  cursor: pointer;
 }

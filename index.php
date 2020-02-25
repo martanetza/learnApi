@@ -1,37 +1,17 @@
 <?php
 // $iCheapestPrice = 999999999;
-$sData = file_get_contents('flights.json');
-// echo $sData;
-$jFlights = json_decode($sData);
+require_once('from-Flights.php');
+// $jFlights = json_decode($sData);
 
 
-// $theShortest = $jData;
 
-// usort($theShortest, function ($first, $second) {
-//   return $first->totalTime > $second->totalTime;
-// });;
+foreach ($jFlights as $jflight) {
+  $iCheapestPrice = $iCheapestPrice ?? $jflight->price;
 
-// $min = array_reduce($theShortest, function ($a, $b) {
-//   return $a['price'] < $b['price'] ? $a : $b;
-// }, array_shift($theShortest));
-
-// print_r($min);
-
-print_r($theShortest);
-// $min = array_reduce($theShortest, function ($a, $b) {
-//   return $a['value'] < $b['value'] ? $a : $b;
-// }, array_shift($theShortest));
-
-// print_r($min);
-
-// foreach ($jData as $jflight) {
-//   $iCheapestPrice = $iCheapestPrice ?? $jflight->price;
-//   $sDepartureDate =  $jflight->departureTime;
-//   $sDepartureDate = date("Y-m-d H:i", substr($sDepartureDate, 0, 10));
-//   if ($jflight->price < $iCheapestPrice) {
-//     $iCheapestPrice = $iCheapestPrice;
-//   }
-// }
+  if ($jflight->price < $iCheapestPrice) {
+    $iCheapestPrice = $jflight->price;
+  }
+}
 
 ?>
 
@@ -59,9 +39,9 @@ print_r($theShortest);
   </nav>
 
   <section>
-    <form id="search" action="">
+    <form id="search" action="index.php" method="POST" autocomplete="off">
       <div id="fromCityBox">
-        <input oninput="getFromCities()" type="text" placeholder="from city" />
+        <input oninput="getFromCities()" id="fromCityInput" name="fromCity" type="text" placeholder="from city" />
         <div id="fromCityResults">
           <div>ABC
 
@@ -70,9 +50,8 @@ print_r($theShortest);
       </div>
 
       <button>&lt;- -&gt;</button>
-      <input type="text" placeholder="to city" />
-      <input type="text" placeholder="from date" />
-      <input type="text" placeholder="to date" />
+      <input name="toCity" type="text" placeholder="to city" />
+      <input name="fromDate" type="date" placeholder="from date" value="2020-03-01" />
       <button>search</button>
     </form>
 
@@ -91,7 +70,7 @@ print_r($theShortest);
         <div id="cheapest">
           CHEAPEST
           <p>
-            <span class="price"> </span> <?= 'fix cheapest'; ?><span class="time">20t. 07min</span>
+            <span class="price"> </span> <?= $iCheapestPrice . 'DKK'; ?><span class="time"> 20t. 07min</span>
           </p>
         </div>
         <div id="best" class="active">

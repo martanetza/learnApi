@@ -1,8 +1,24 @@
 <?php
 
+
 http_response_code(200);
 header('Content-Type: application/json');
 
-$aFromCities = ['a', 'b', 'c'];
+$sData = file_get_contents('flights.json');
+$jFlights = json_decode($sData);
 
-echo json_encode($aFromCities);
+$sSearchFor = $_GET['cityName'];
+
+
+$jResponse = new stdClass();
+$jResponse->cities = ["city"];
+
+
+foreach ($jFlights as $jFlight) {
+    if (stripos($jFlight->schedule[0]->fromCity, $sSearchFor) !== false) {
+
+
+        $jResponse->cities[] =  $jFlight->schedule[0]->fromCity;
+    }
+}
+echo json_encode($jResponse);
