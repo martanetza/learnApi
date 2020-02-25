@@ -16,6 +16,9 @@ $flyingTime = gmdate("H:i", ($epoch2 - $epoch1));
 $flyingTime = gmdate("H:i", (10800));
 
 echo $flyingTime;
+
+echo "czas" . gmdate("Y-m-d", $epoch1);
+
 ?>
 <script>
     String.prototype.toHHMM = function() {
