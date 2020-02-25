@@ -126,8 +126,8 @@ print_r($theShortest);
                 $jRoutes = $flight->schedule;
                 foreach ($jRoutes as $route) :
                   $fromDate = gmdate("m/d", $route->departureTime);
-                  $fromTime = gmdate("H", $route->departureTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
-                  $toTime = gmdate("H", $route->arrivalTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
+                  $fromTime = gmdate("H:i", $route->departureTime);
+                  $toTime = gmdate("H:i", $route->arrivalTime);
                   $waitingTime = gmdate("H", $route->waitingTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
                   $flightTime = gmdate("H", $route->flyingTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
 
