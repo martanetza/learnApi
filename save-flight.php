@@ -8,7 +8,7 @@ $aToCities = $_POST['toCity'];
 $aDepartureTimes = $_POST['departureTime'];
 $aArrivalTimes = $_POST['arrivalTime'];
 $aWaitingTimes = $_POST['waitingTime'];
-
+$iTotalRouteTime;
 
 print_r($aAirlinesNames);
 
@@ -29,17 +29,20 @@ $jFlight->price = $price;
 $jFlight->totalTime = $iFlightTotalTime;
 $jFlight->id = uniqid();
 $jFlight->schedule = [];
+$jFlight->totalTime = $iFlightTotalTime;
 
 array_push($jFlights, $jFlight);
 
+$iFlightTotalTime = 0;
 
 //loop through all the routes
 for ($i = 0; $i < count($aAirlinesNames); $i++) {
     // calculate total route and waiting time in seconds 
-    $iDepartureEpochTime = strtotime($aDepartureTimes[$i]) + 3600;
-    $iArrivalEpochTime = strtotime($aArrivalTimes[$i]) + 3600;
+    $iDepartureEpochTime = strtotime($aDepartureTimes[$i]);
+    $iArrivalEpochTime = strtotime($aArrivalTimes[$i]);
     $waitingTimeArray = explode(':', $aWaitingTimes[$i]);
     $iWaitingTimeSeconds = (intval($waitingTimeArray[0]) * 60 * 60) + (intval($waitingTimeArray[1]) * 60);
+    $iFlyingTime = $iArrivalEpochTime - $iDepartureEpochTime;
     $iTotalRouteTime = $iArrivalEpochTime - $iDepartureEpochTime + $iWaitingTimeSeconds;
     $iFlightTotalTime += $iTotalRouteTime;
 
@@ -48,11 +51,11 @@ for ($i = 0; $i < count($aAirlinesNames); $i++) {
     $jRoute->airlinesShortcut  = $aAirlinesShortcuts[$i];
     $jRoute->fromCity = $aFromCities[$i];
     $jRoute->toCity = $aToCities[$i];
-    $jRoute->departureTime = $iDepartureEpochTime;
-    $jRoute->arrivalTime = $iArrivalEpochTime;
+    $jRoute->departureTime = $iDepartureEpochTime  + 3600;
+    $jRoute->arrivalTime = $iArrivalEpochTime + 3600;
     $jRoute->waitingTime = $iWaitingTimeSeconds;
+    $jRoute->flyingTime =  $iFlyingTime;
     $jRoute->totalTime =  $iFlightTotalTime;
-    $jRoute->flyingTime =  $iArrivalEpochTime - $iDepartureEpochTime;
 
     // $waitingTimeToArray = explode(':',  $aWaitingTimes[$i]);
     // $iHour = intval($waitingTimeToArray);
@@ -60,6 +63,7 @@ for ($i = 0; $i < count($aAirlinesNames); $i++) {
     array_push($jFlight->schedule, $jRoute);
 }
 
+$jFlight->totalTime = $iFlightTotalTime;
 
 
 

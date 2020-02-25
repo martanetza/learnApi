@@ -1,15 +1,15 @@
 <?php
 // $iCheapestPrice = 999999999;
-$sData = file_get_contents('most-popular-flights.json');
+$sData = file_get_contents('flights.json');
 // echo $sData;
-$jData = json_decode($sData);
-$flightDiv = '';
+$jFlights = json_decode($sData);
 
-$theShortest = $jData;
 
-usort($theShortest, function ($first, $second) {
-  return $first->totalTime > $second->totalTime;
-});;
+// $theShortest = $jData;
+
+// usort($theShortest, function ($first, $second) {
+//   return $first->totalTime > $second->totalTime;
+// });;
 
 // $min = array_reduce($theShortest, function ($a, $b) {
 //   return $a['price'] < $b['price'] ? $a : $b;
@@ -24,62 +24,14 @@ print_r($theShortest);
 
 // print_r($min);
 
-foreach ($jData as $jflight) {
-  $iCheapestPrice = $iCheapestPrice ?? $jflight->price;
-  $sDepartureDate =  $jflight->departureTime;
-  $sDepartureDate = date("Y-m-d H:i", substr($sDepartureDate, 0, 10));
-  if ($jflight->price < $iCheapestPrice) {
-    $iCheapestPrice = $iCheapestPrice;
-  }
-  $flightDiv .=
-    "
-    <div id='flights'>
-
-    <div id='flight'>
-  <div id='flight-route'>
-    <div class='row'>
-      <input type='checkbox' />
-      <div>
-        <img src='icons/KL.png' alt='' />
-      </div>
-      <div>
-      $sDepartureDate - 19.00
-        <p>KLN</p>
-      </div>
-      <div>
-        1 stop
-        <p>Amsterdam</p>
-      </div>
-      <div>
-        10h
-        <p>CPH - MAI</p>
-      </div>
-    </div>
-    <div class='row'>
-      <input type='checkbox' />
-      <div>
-        <img src='icons/$jflight->companyShortcut.png' alt='' />
-      </div>
-      <div>
-      $iCheapestPrice - 19.00
-        <p>KLN</p>
-      </div>
-      <div>
-        1 stop
-        <p>Amsterdam</p>
-      </div>
-      <div>
-        10h
-        <p>CPH - MAI</p>
-      </div>
-    </div>
-  </div>
-  <div id='flight-price'>
-  <div>  $jflight->price   kr</div>
-  <button>buy</button>
-</div>
-</div>";
-}
+// foreach ($jData as $jflight) {
+//   $iCheapestPrice = $iCheapestPrice ?? $jflight->price;
+//   $sDepartureDate =  $jflight->departureTime;
+//   $sDepartureDate = date("Y-m-d H:i", substr($sDepartureDate, 0, 10));
+//   if ($jflight->price < $iCheapestPrice) {
+//     $iCheapestPrice = $iCheapestPrice;
+//   }
+// }
 
 ?>
 
@@ -95,7 +47,7 @@ foreach ($jData as $jflight) {
 </head>
 
 <body>
-  <nav>
+  <nav class="nav-admin">
     <a id="logo" class="active" href="index.php">momondo</a>
     <a href="">fly</a>
     <a href="">hotel</a>
@@ -106,21 +58,24 @@ foreach ($jData as $jflight) {
     <a href="">login</a>
   </nav>
 
-  <section id="search">
-    <div id="fromCityBox">
-      <input oninput="getFromCities()" type="text" placeholder="from city" />
-      <div id="fromCityResults">
-        <div>ABC
+  <section>
+    <form id="search" action="">
+      <div id="fromCityBox">
+        <input oninput="getFromCities()" type="text" placeholder="from city" />
+        <div id="fromCityResults">
+          <div>ABC
 
+          </div>
         </div>
       </div>
-    </div>
 
-    <button>&lt;- -&gt;</button>
-    <input type="text" placeholder="to city" />
-    <input type="text" placeholder="from date" />
-    <input type="text" placeholder="to date" />
-    <button>search</button>
+      <button>&lt;- -&gt;</button>
+      <input type="text" placeholder="to city" />
+      <input type="text" placeholder="from date" />
+      <input type="text" placeholder="to date" />
+      <button>search</button>
+    </form>
+
   </section>
 
   <section id="temporal">
@@ -136,7 +91,7 @@ foreach ($jData as $jflight) {
         <div id="cheapest">
           CHEAPEST
           <p>
-            <span class="price"> </span> <?= $iCheapestPrice; ?><span class="time">20t. 07min</span>
+            <span class="price"> </span> <?= 'fix cheapest'; ?><span class="time">20t. 07min</span>
           </p>
         </div>
         <div id="best" class="active">
@@ -156,65 +111,75 @@ foreach ($jData as $jflight) {
           <p>comapre</p>
         </div>
       </div>
-      <!-- <div id="stops-box">
-          <div></div>
-          <div></div>
-        </div>
-        <div id="stops"></div> -->
       <?php
-      echo $flightDiv;
+      foreach ($jFlights as $flight) :
+        $totalTime = gmdate("H", $flight->totalTime) . 'h ' . gmdate("i", $flight->totalTime) . 'min';;
 
       ?>
-
-
-
-
-      <!-- <div id="flight">
-
+        <div id="flight">
           <div id="flight-route">
-            <div class="row">
-              <input type="checkbox" />
-              <div>
-                <img src="icons/KL.png" alt="" />
-              </div>
-              <div>
-                18.00 - 19.00
-                <p>KLN</p>
-              </div>
-              <div>
-                1 stop
-                <p>Amsterdam</p>
-              </div>
-              <div>
-                10h
-                <p>CPH - MAI</p>
-              </div>
-            </div>
-            <div class="row">
-              <input type="checkbox" />
-              <div>
-                <img src="icons/KL.png" alt="" />
-              </div>
-              <div>
-                18.00 - 19.00
-                <p>KLN</p>
-              </div>
-              <div>
-                1 stop
-                <p>Amsterdam</p>
-              </div>
-              <div>
-                10h
-                <p>CPH - MAI</p>
-              </div>
-            </div>
-          </div>
+            <div class="oneFlight" id="<?= $flight->id; ?>">
 
+              <div class="routes">
+
+                <?php
+                $jRoutes = $flight->schedule;
+                foreach ($jRoutes as $route) :
+                  $fromDate = gmdate("m/d", $route->departureTime);
+                  $fromTime = gmdate("H", $route->departureTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
+                  $toTime = gmdate("H", $route->arrivalTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
+                  $waitingTime = gmdate("H", $route->waitingTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
+                  $flightTime = gmdate("H", $route->flyingTime) . 'h ' . gmdate("i", $route->waitingTime) . 'min';
+
+                  $showOrHide = 'show';
+                  if ($route->waitingTime <= 0) {
+                    $showOrHide = 'hide';
+                  }
+                ?>
+                  <div class="route">
+                    <div class="col-date">
+                      <?php echo $fromDate; ?>
+                    </div>
+                    <div class="col-details">
+                      <div class="row-details">
+                        <div class="col-left">
+                          <div><?= $fromTime; ?> — <?= $toTime; ?></div>
+                          <div><?= $route->fromCity; ?> - <?= $route->toCity; ?></div>
+                        </div>
+                        <div class="col-right">
+                          <?= ($flightTime[0] != '0') ?   $flightTime  :   trim($flightTime, "0"); ?>
+                        </div>
+                      </div>
+                      <div class="waiting-time-row <?= $showOrHide; ?>">
+                        <div class="col-left">Waiting time in <?= $route->toCity; ?></div>
+                        <div class="col-right">
+                          <?= ($waitingTime[0] != '0') ?   $waitingTime :   trim($waitingTime, "0"); ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <?php
+
+                endforeach
+                ?>
+
+              </div>
+
+            </div>
+
+          </div>
           <div id="flight-price">
-            <div>3.400 kr</div>
+            <div class="total-time-info">total time: <br><?= ($totalTime[0] != '0') ?   $totalTime :   trim($totalTime, "0"); ?> </div>
+            <div><?= $flight->price; ?> DKK</div>
             <button>buy</button>
           </div>
-        </div> -->
+        </div>
+
+      <?php
+
+      endforeach
+      ?>
     </div>
     </div>
   </main>
@@ -243,46 +208,3 @@ foreach ($jData as $jflight) {
 </body>
 
 </html>
-
-<!-- <script>
-  // Selv invoking function
-  async function getFlights() {
-    var connection = await fetch("momondo.php");
-    var jData = await connection.json();
-    console.log(jData);
-
-    for (var i = 0; i < jData.length; i++) {
-      // console.log(jData[i].schedule);
-      var aOrderedSchedule = [];
-      for (var n = 0; n < jData[i].schedule.length; n++) {
-        aOrderedSchedule[jData[i].schedule[n].order] = jData[i].schedule[n];
-      }
-      // console.log(aOrderedSchedule);
-      var sDivsWithStops = "";
-      for (var n = 0; n < aOrderedSchedule.length; n++) {
-        var sFromDate = new Date(0);
-        sFromDate.setUTCSeconds(aOrderedSchedule[n].date);
-        sFromDate = sFromDate.toLocaleString("da-DK");
-        sDivsWithStops += `
-        <div class="onceFlight">
-          <img class="airline-icon" src="icons/${aOrderedSchedule[n].airlineIcon}">
-          <div>FROM: ${aOrderedSchedule[n].from}</div>
-          <div>DATE: ${sFromDate}</div>
-        </div>`;
-      }
-
-      var jLastCity = aOrderedSchedule[aOrderedSchedule.length - 1];
-      // console.log(jLastCity);
-      var sTo = `<div>Arrives at city: ${jLastCity.to}</div>`;
-
-      document.getElementById("results").innerHTML += `
-                          <div id="stops-box"> 
-                        <div class="oneDivsWithStops"> 
-                        ${sDivsWithStops} ${sTo}
-                        </div> 
-                        <div class="price"></div>
-                         </div>`;
-    }
-  }
-  getFlights();
-</script> -->
