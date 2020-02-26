@@ -233,7 +233,8 @@ input[type="checkbox"] {
 
 /* ########################### */
 
-.modal {
+.modal,
+.modal-my-trip {
   position: fixed;
   top: 0;
   right: 0;
@@ -368,4 +369,17 @@ input[type="checkbox"] {
 
 #fromCityResults div {
   cursor: pointer;
+}
+
+/* ############################################################################### */
+
+.userBookingInfo p {
+  margin-bottom: 50px;
+}
+
+.modal-content-flight-info {
+  text-align: left;
+}
+.modal-content-flight-info span {
+  font-weight: 400;
 }

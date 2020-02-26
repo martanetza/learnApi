@@ -34,7 +34,7 @@ foreach ($jFlights as $jflight) {
     <a href="">car</a>
     <a href="">trips</a>
     <a href="">discovery</a>
-    <a href="">my trip</a>
+    <a onclick="openBookingModal()">my trip</a>
     <a href="">login</a>
   </nav>
 
@@ -183,6 +183,22 @@ foreach ($jFlights as $jflight) {
     </div>
     </div>
   </main>
+  <div class="modal-my-trip">
+    <div class="modal-content">
+      <section class="modal-content-user-form">
+        <form class="userBookingInfo" id="bookingInfo" onsubmit="return false">
+          <p>Please provide your email and booking number to check details about the flight</p>
+          <input id="bookingEmail" type="text" placeholder="email">
+          <input id="bookingNumber" type="text" placeholder="booking number">
+          <button onclick="getBookingInfo()" class="btn-next"> see details</button>
+        </form>
+      </section>
+      <section class="modal-content-flight-info">
+
+      </section>
+    </div>
+  </div>
+
 
   <script src="app.js"></script>
 </body>

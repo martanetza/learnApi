@@ -150,41 +150,5 @@
                 "flyingTime": 69300
             }
         ]
-    },
-    {
-        "price": null,
-        "totalTime": 0,
-        "id": "5e5653c833af4",
-        "schedule": [
-            {
-                "airlinesName": "",
-                "airlinesShortcut": "",
-                "fromCity": "",
-                "toCity": "",
-                "departureTime": 3600,
-                "arrivalTime": 3600,
-                "waitingTime": 0,
-                "flyingTime": 0,
-                "totalTime": 0
-            }
-        ]
-    },
-    {
-        "price": null,
-        "totalTime": 0,
-        "id": "5e565626879c7",
-        "schedule": [
-            {
-                "airlinesName": "",
-                "airlinesShortcut": "",
-                "fromCity": "",
-                "toCity": "",
-                "departureTime": 3600,
-                "arrivalTime": 3600,
-                "waitingTime": 0,
-                "flyingTime": 0,
-                "totalTime": 0
-            }
-        ]
     }
 ]

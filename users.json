@@ -1,5 +1,149 @@
 [
-  {
-    "m": 1
-  }
+    {
+        "email": "a@a.com",
+        "phonenumber": "ad",
+        "bookings": {
+            "number": "5e566dd3c3f3d",
+            "flight": {
+                "price": "2000",
+                "totalTime": 0,
+                "id": "5e54ee1d69ed9",
+                "schedule": [
+                    {
+                        "airlinesName": "Norwegian",
+                        "airlinesShortcut": "NOR",
+                        "fromCity": "Stockholm",
+                        "toCity": "Krabi",
+                        "departureTime": 1585161900,
+                        "arrivalTime": 1585221000,
+                        "waitingTime": 0,
+                        "totalTime": 59100,
+                        "flyingTime": 59100
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "email": "martanetza2210@gmail.com",
+        "phonenumber": "12345",
+        "bookings": {
+            "number": "5e567168823ea",
+            "flight": {
+                "price": "4000",
+                "totalTime": 0,
+                "id": "5e54ef040512b",
+                "schedule": [
+                    {
+                        "airlinesName": "AirAsia",
+                        "airlinesShortcut": "AK",
+                        "fromCity": "Krabi",
+                        "toCity": "Kuala Lumpur",
+                        "departureTime": 1585245600,
+                        "arrivalTime": 1585254600,
+                        "waitingTime": 44400,
+                        "totalTime": 53400,
+                        "flyingTime": 9000
+                    },
+                    {
+                        "airlinesName": "AirAsia",
+                        "airlinesShortcut": "AK",
+                        "fromCity": "Kuala Lumpur",
+                        "toCity": "Sydney",
+                        "departureTime": 1582793400,
+                        "arrivalTime": 1582834800,
+                        "waitingTime": 0,
+                        "totalTime": 94800,
+                        "flyingTime": 41400
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "email": "martanetza@wp.pl",
+        "phonenumber": "1234",
+        "bookings": {
+            "number": "5e567281cd6a9",
+            "flight": {
+                "price": "2000",
+                "totalTime": 0,
+                "id": "5e54ee1d69ed9",
+                "schedule": [
+                    {
+                        "airlinesName": "Norwegian",
+                        "airlinesShortcut": "NOR",
+                        "fromCity": "Stockholm",
+                        "toCity": "Krabi",
+                        "departureTime": 1585161900,
+                        "arrivalTime": 1585221000,
+                        "waitingTime": 0,
+                        "totalTime": 59100,
+                        "flyingTime": 59100
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "email": "martanetza@wp.pl",
+        "phonenumber": "124",
+        "bookings": {
+            "number": "5e567306d6365",
+            "flight": {
+                "price": "2000",
+                "totalTime": 0,
+                "id": "5e54ee1d69ed9",
+                "schedule": [
+                    {
+                        "airlinesName": "Norwegian",
+                        "airlinesShortcut": "NOR",
+                        "fromCity": "Stockholm",
+                        "toCity": "Krabi",
+                        "departureTime": 1585161900,
+                        "arrivalTime": 1585221000,
+                        "waitingTime": 0,
+                        "totalTime": 59100,
+                        "flyingTime": 59100
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "email": "martanetza2210@gmail.com",
+        "phonenumber": "123",
+        "bookings": {
+            "number": "5e567342e3bd9",
+            "flight": {
+                "price": "4000",
+                "totalTime": 0,
+                "id": "5e54ef040512b",
+                "schedule": [
+                    {
+                        "airlinesName": "AirAsia",
+                        "airlinesShortcut": "AK",
+                        "fromCity": "Krabi",
+                        "toCity": "Kuala Lumpur",
+                        "departureTime": 1585245600,
+                        "arrivalTime": 1585254600,
+                        "waitingTime": 44400,
+                        "totalTime": 53400,
+                        "flyingTime": 9000
+                    },
+                    {
+                        "airlinesName": "AirAsia",
+                        "airlinesShortcut": "AK",
+                        "fromCity": "Kuala Lumpur",
+                        "toCity": "Sydney",
+                        "departureTime": 1582793400,
+                        "arrivalTime": 1582834800,
+                        "waitingTime": 0,
+                        "totalTime": 94800,
+                        "flyingTime": 41400
+                    }
+                ]
+            }
+        }
+    }
 ]
