@@ -185,12 +185,14 @@ foreach ($jFlights as $jflight) {
   </main>
   <div class="modal-my-trip">
     <div class="modal-content">
+      <div id="closeBth" onclick="closeBookingModal()">X</div>
       <section class="modal-content-user-form">
-        <form class="userBookingInfo" id="bookingInfo" onsubmit="return false">
+        <form class="userBookingInfo" id="bookingInfo" onsubmit="return validate()">
           <p>Please provide your email and booking number to check details about the flight</p>
-          <input id="bookingEmail" type="text" placeholder="email">
-          <input id="bookingNumber" type="text" placeholder="booking number">
-          <button onclick="getBookingInfo()" class="btn-next"> see details</button>
+          <input oninput="validate()" id="bookingEmail" type="text" placeholder="email" data-validate="email">
+          <input oninput="validate()" id="bookingNumber" type="text" placeholder="booking number - 13 characters" data-validate="string" data-min="13">
+          <p class="error-message">The booking does not exist</p>
+          <button class="btn-next" onclick="getBookingInfo()"> see details</button>
         </form>
       </section>
       <section class="modal-content-flight-info">
@@ -198,7 +200,7 @@ foreach ($jFlights as $jflight) {
       </section>
     </div>
   </div>
-
+  <!-- onclick="getBookingInfo()" -->
 
   <script src="app.js"></script>
 </body>

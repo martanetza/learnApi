@@ -150,5 +150,92 @@
                 "flyingTime": 69300
             }
         ]
+    },
+    {
+        "price": "3000",
+        "totalTime": 52200,
+        "id": "5e56988929fc4",
+        "schedule": [
+            {
+                "airlinesName": "LOT",
+                "airlinesShortcut": "LO",
+                "fromCity": "Copenhagen",
+                "toCity": "Warsaw",
+                "departureTime": 1584042600,
+                "arrivalTime": 1584047700,
+                "waitingTime": 5100,
+                "flyingTime": 5100,
+                "totalTime": 10200
+            },
+            {
+                "airlinesName": "LOT",
+                "airlinesShortcut": "LO",
+                "fromCity": "Warsaw",
+                "toCity": "Singapore",
+                "departureTime": 1584054000,
+                "arrivalTime": 1584096000,
+                "waitingTime": 0,
+                "flyingTime": 42000,
+                "totalTime": 52200
+            }
+        ]
+    },
+    {
+        "price": "4000",
+        "totalTime": 47100,
+        "id": "5e5699c46a5e2",
+        "schedule": [
+            {
+                "airlinesName": "Finnair",
+                "airlinesShortcut": "FN",
+                "fromCity": "Copenhagen",
+                "toCity": "Helsinki",
+                "departureTime": 1584907500,
+                "arrivalTime": 1584917100,
+                "waitingTime": 6000,
+                "flyingTime": 9600,
+                "totalTime": 15600
+            },
+            {
+                "airlinesName": "Finnair",
+                "airlinesShortcut": "FR",
+                "fromCity": "Helsinki",
+                "toCity": "Hong Kong",
+                "departureTime": 1584921300,
+                "arrivalTime": 1584952800,
+                "waitingTime": 0,
+                "flyingTime": 31500,
+                "totalTime": 47100
+            }
+        ]
+    },
+    {
+        "price": "2000",
+        "totalTime": 57000,
+        "id": "5e56a9b482c0a",
+        "schedule": [
+            {
+                "airlinesName": "Lufthansa",
+                "airlinesShortcut": "LH",
+                "fromCity": "Copenhagen",
+                "toCity": "FrankfurtamMain",
+                "departureTime": 1584859800,
+                "arrivalTime": 1584865200,
+                "waitingTime": 7800,
+                "flyingTime": 5400,
+                "totalTime": 13200
+            },
+            {
+                "airlinesName": "Lufthansa",
+                "airlinesShortcut": "LH",
+                "fromCity": "FrankfurtamMain",
+                "toCity": "PanamaCity",
+                "departureTime": 1584873600,
+                "arrivalTime": 1584917400,
+                "waitingTime": 0,
+                "flyingTime": 43800,
+                "totalTime": 57000
+            }
+        ]
     }
 ]
