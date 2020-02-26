@@ -242,5 +242,41 @@
                 ]
             }
         }
+    },
+    {
+        "email": "martanetza2210@gmail.com",
+        "phonenumber": "31843208",
+        "bookings": {
+            "number": "5e56e3d269eda",
+            "flight": {
+                "price": "2000",
+                "totalTime": 0,
+                "id": "5e54e94f62f36",
+                "schedule": [
+                    {
+                        "airlinesName": "Qatar Airways",
+                        "airlinesShortcut": "QA",
+                        "fromCity": "Copenhagen",
+                        "toCity": "Doha",
+                        "departureTime": 1582666800,
+                        "arrivalTime": 1582696200,
+                        "waitingTime": 7500,
+                        "totalTime": 36900,
+                        "flyingTime": 29400
+                    },
+                    {
+                        "airlinesName": "Qatar Airways",
+                        "airlinesShortcut": "QA",
+                        "fromCity": "Doha",
+                        "toCity": "Sydney",
+                        "departureTime": 1582703700,
+                        "arrivalTime": 1582783800,
+                        "waitingTime": 0,
+                        "totalTime": 117000,
+                        "flyingTime": 80100
+                    }
+                ]
+            }
+        }
     }
 ]
