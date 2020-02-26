@@ -215,3 +215,9 @@ async function getItems() {
   }
 }
 getItems();
+
+// function openBuyModal(id) {
+//   document.querySelector(
+//     ".buy-button[data-flightid=" + id + "]"
+//   ).style.display = "block";
+// }

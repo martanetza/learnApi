@@ -29,3 +29,41 @@ function selectName() {
   document.querySelector("#fromCityInput").value = event.target.innerText;
   document.querySelector("#fromCityResults").style.display = "none";
 }
+
+function openBuyModal(flightid) {
+  console.log(flightid);
+  document.querySelectorAll(".modal").forEach(e => {
+    if (e.dataset.flightid == flightid) {
+      e.style.display = "block";
+      console.log(flightid, e.dataset.flightid);
+    }
+  });
+}
+
+function closeBuyModal() {
+  document.querySelectorAll(".modal").forEach(e => {
+    e.style.display = "none";
+  });
+}
+
+function moveForward(flightid) {
+  document.querySelectorAll(".modal").forEach(e => {
+    if (e.dataset.flightid == flightid) {
+      e.querySelector(".userContactInfo").style.display = "none";
+      e.querySelector(".confirmationInfo").style.display = "block";
+      e.querySelector(".btn-next").style.display = "none";
+      e.querySelector(".btn-cancel").classList.add("btn-next");
+      e.querySelector(".btn-cancel").innerText = "finish";
+    }
+  });
+
+  async function buyTicket() {
+    var oForm = document.querySelector(`#buyTicketForm${flightid}`);
+    console.log(oForm);
+    var response = await fetch("save-ticket.php", {
+      method: "POST",
+      body: new FormData(oForm)
+    });
+  }
+  buyTicket();
+}

@@ -236,6 +236,7 @@ input[type="checkbox"] {
 .modal {
   position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -253,13 +254,20 @@ input[type="checkbox"] {
   padding: 50px;
   border-radius: 5px;
   text-align: center;
+  color: black;
 }
 
-#userContactInfo p {
+.confirmationInfo {
+  display: none;
+}
+.userContactInfo {
+  width: 100%;
+}
+.userContactInfo p {
   margin-bottom: 20px;
 }
 
-#confirmationInfo h3 {
+.confirmationInfo h3 {
   margin-bottom: 40px;
 }
 
@@ -269,20 +277,22 @@ input[type="checkbox"] {
 }
 
 .modal-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  width: 100%;
+  /* grid-template-columns: 1fr 1fr; */
 }
 .btn-cancel {
   background-color: #edecec;
-  width: 50%;
+  max-width: 200px;
   margin: auto;
   color: #333;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .btn-next {
   background-color: #28a745;
-  width: 50%;
+  max-width: 200px;
   margin: auto;
+  color: white;
 }
 /* ########################################################################################### */
 

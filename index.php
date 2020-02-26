@@ -151,10 +151,31 @@ foreach ($jFlights as $jflight) {
           <div id="flight-price">
             <div class="total-time-info">total time: <br><?= ($totalTime[0] != '0') ?   $totalTime :   trim($totalTime, "0"); ?> </div>
             <div><?= $flight->price; ?> DKK</div>
-            <button>buy</button>
+            <button data-flightid="<?= $flight->id; ?>" class="buy-button" onclick="openBuyModal('id<?= $flight->id; ?>')">buy</button>
           </div>
         </div>
-
+        <div data-flightid="id<?= $flight->id; ?>" class=" modal">
+          <div class="modal-content">
+            <div class="confirmationInfo">
+              <h3> Congratulation, you have bought a ticket to <?= $flight->schedule[count($flight->schedule) - 1]->toCity; ?></h3>
+              <p>You will now receive an email and a text message with your booking number</p>
+            </div>
+            <form class="userContactInfo" id="buyTicketFormid<?= $flight->id; ?>" onsubmit="return false">
+              <p>Please provide your email address and phone number to finish the order</p>
+              <input name="email" type="text" placeholder="email">
+              <input name="phonenumber" type="text" placeholder="phonenumber">
+              <input name="flightid" type="hidden" value="<?= $flight->id; ?>">
+            </form>
+            <div class="modal-nav">
+              <button onclick="closeBuyModal()" class="btn-cancel">
+                Cancle
+              </button>
+              <button onclick="moveForward('id<?= $flight->id; ?>')" class="btn-next">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
       <?php
 
       endforeach
@@ -162,27 +183,7 @@ foreach ($jFlights as $jflight) {
     </div>
     </div>
   </main>
-  <div class="modal">
-    <div class="modal-content">
-      <div id="confirmationInfo">
-        <h3> Congratulation, you have bought a ticke to Amsterdam</h3>
-        <p>You will now receive an email and a text message with your booking number</p>
-      </div>
-      <!-- <form id="userContactInfo" action="">
-        <p>Please provide your email address and phone number to finish the order</p>
-        <input type="text" placeholder="email">
-        <input type="text" placeholder="phonenumber">
-      </form> -->
-      <div class="modal-nav">
-        <button class="btn-cancel">
-          Cancle
-        </button>
-        <button class="btn-next">
-          Finish
-        </button>
-      </div>
-    </div>
-  </div>
+
   <script src="app.js"></script>
 </body>
 
